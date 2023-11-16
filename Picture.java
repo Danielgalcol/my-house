@@ -71,9 +71,20 @@ public class Picture
         garden.moveHorizontal(-320);
         sun.slowMoveVertical(300);
         moon.makeVisible();
-        
     }
-
+    
+    /**
+     * Amanecer: 
+    La luna deje de estar visible.
+    El sol suba lentamente de nuevo como si estuviera amaneciendo.
+    Este método lo vamos a invocar siempre con el ratón después de invocar el método draw (es decir, el sol seguro que va a estar bajo).
+    */
+    public void Amanecer(){
+        moon.makeInvisible();
+        sun.makeVisible();
+        sun.slowMoveVertical(-300);
+    }
+    
     /**
      * Change this picture to black/white display
      */
