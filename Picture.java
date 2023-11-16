@@ -16,7 +16,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Circle moon;
-
+    private Square garden;
     /**
      * Constructor for objects of class Picture
      */
@@ -56,11 +56,22 @@ public class Picture
         sun.changeSize(80);
         sun.makeVisible();
         
+        
         moon = new Circle();
-        moon.makeVisible();
+        moon.makeInvisible();
         moon.changeSize(30);
         moon.moveHorizontal(-120);
         moon.changeColor("magenta");
+        
+        garden = new Square();
+        garden.makeVisible();
+        garden.changeColor("green");
+        garden.changeSize(550);
+        garden.moveVertical(140);
+        garden.moveHorizontal(-320);
+        sun.slowMoveVertical(300);
+        moon.makeVisible();
+        
     }
 
     /**
