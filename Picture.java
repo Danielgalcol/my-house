@@ -17,6 +17,8 @@ public class Picture
     private Circle sun;
     private Circle moon;
     private Square garden;
+    private Person persona;
+    private Person persona2;
     /**
      * Constructor for objects of class Picture
      */
@@ -71,6 +73,16 @@ public class Picture
         garden.moveHorizontal(-320);
         sun.slowMoveVertical(300);
         moon.makeVisible();
+        
+        persona = new Person();
+        persona.moveHorizontal(-180);
+        persona.moveVertical(35);
+        persona.makeInvisible();
+        
+        persona2 = new Person();
+        persona2.moveHorizontal(100);
+        persona2.moveVertical(35);
+        persona2.makeInvisible();
     }
     
     /**
@@ -79,10 +91,14 @@ public class Picture
     El sol suba lentamente de nuevo como si estuviera amaneciendo.
     Este método lo vamos a invocar siempre con el ratón después de invocar el método draw (es decir, el sol seguro que va a estar bajo).
     */
-    public void Amanecer(){
+    public void amanecer(){
         moon.makeInvisible();
         sun.makeVisible();
         sun.slowMoveVertical(-300);
+        persona.makeVisible();
+        persona2.makeVisible();
+        persona.slowMoveHorizontal(100);
+        persona2.slowMoveHorizontal(-70);
     }
     
     /**
